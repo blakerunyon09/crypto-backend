@@ -8,7 +8,7 @@ class UsersController < ApplicationController
             username: params[:username],
             password: params[:password]
         )
-        redirect_to 'http://localhost:3000'
+        redirect_to 'https://gracious-kilby-8e4aa8.netlify.app'
     end
     def login
         @user = User.find_by(username: params[:username])
