@@ -6,10 +6,7 @@ Cryptocurrency.destroy_all
 # Cryptocurrency.create([{name_id: "Bob_Coin", symbol: "BbCoin", name: "BBBCoin"}])
 
 user1 = User.create(username: 'Jamonsta', password: '1234')
-user2 =User.create(username: 'brunyon', password: 'Ruby123')
-
-
-
+User.create(username: 'brunyon', password: 'Ruby123')
 
 Cryptocurrency.create(
   [
@@ -31925,8 +31922,10 @@ Cryptocurrency.create(
     }
   ]
 )
-test1 = Cryptocurrency.create(name_id: 'test', symbol: 'testsymbol', name: 'testing')
+test1 = Cryptocurrency.create(name_id: "biblepay",symbol: "bbp",name: "BiblePay")
+test2 = Cryptocurrency.create(name_id: "bitcoin",symbol: "btc",name: "Bitcoin")
 Favorite.create(user: user1, cryptocurrency: test1)
+Favorite.create(user: user1, cryptocurrency: test2)
 
 
 

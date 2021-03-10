@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :cryptocurrencies
 
   get '/search', to: 'cryptocurrencies#search'
+  get '/login', to: 'users#login'
+  delete '/removeFav', to: 'favorites#removeFav'
 end

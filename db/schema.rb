@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_03_09_213224) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cryptocurrencies", force: :cascade do |t|
     t.string "name_id"
     t.string "symbol"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 2021_03_09_213224) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "cryptocurrency_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "cryptocurrency_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cryptocurrency_id"], name: "index_favorites_on_cryptocurrency_id"
