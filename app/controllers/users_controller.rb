@@ -18,4 +18,8 @@ class UsersController < ApplicationController
             render json: "Sorry We Couldn't Find That User."
         end
     end
+    def destroy
+        @user = User.find(params([:id]))
+        @user.destroy
+    end
 end
